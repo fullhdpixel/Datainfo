@@ -8,9 +8,29 @@ public class Quoter {
 //5 => 50.0
 //>6 => 0.0
 	
-	public String isbn;
+	public enum isbn {
+		
+	}
 	public double getBookPrice(String isbn) {
 		double result;
+		
+		switch(isbn) {
+			case "1": result = 10.0;
+				break;
+			case "2": result = 45.0;
+				break;
+			case "3": result = 20.0;
+				break;
+			case "4": result = 35.0;
+				break;
+			case "5": result = 50.0;
+				break;
+			default: result = 0.0;
+		} 
+		
+		return result;
+		
+		/*
 		if (isbn.equals("1")) {
 			result = 10.0;
 		} else if (isbn.equals("2")) {
@@ -25,5 +45,6 @@ public class Quoter {
 			result = 0.0;
 		}
 		return result;
+		*/
 	}
 }
