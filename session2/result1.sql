@@ -8,5 +8,4 @@ insert into Problem1 (task, result, motivation) values
 	('g',false,'Voertuig en capaciteit hebben geen vaste bezorger'),
 	('h',true,'B is een functionele afhankelijkheid van V'),
 	('i',true,'C is een functionele afhankelijkheid van V'),
-	('j',true,'h en i zijn waar, dus de combinatie van h en i is ook true'),
-);
+	('j',true,'h en i zijn waar, dus de combinatie van h en i is ook true');
