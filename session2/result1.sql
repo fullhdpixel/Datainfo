@@ -1,4 +1,4 @@
-insert into Problem1 (task, result, motivatie) values 
+insert into Problem1 (task, result, motivation) values 
 	('a',false,'Capaciteit is niet uniek.'),
 	('b',true,'Elk voertuig heeft een capaciteit.'),
 	('c',true,'Aan de hand van de factuur en het afleveradres is de pakje bekend bij De Pakjesman.'),
