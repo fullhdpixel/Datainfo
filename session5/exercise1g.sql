@@ -8,15 +8,15 @@ CREATE TABLE Bestelling
   CONSTRAINT Bestelling_pkey PRIMARY KEY (isbn)
 );
 
-CREATE FUNCTION addbook() RETURNS boolean AS $$
+CREATE FUNCTION addbook() RETURNS trigger AS $emp_stamp$
     BEGIN
-		--Schrijver die nog niet in de tabel boek voorkomt.
-		IF(NOT(EXISTS(SELECT auteur FROM Boek WHERE auteur = NEW.auteur))) {
-			--Voeg nieuwe rij aan bestelling toe
-			INSERT INTO Bestelling (isbn, aantal) VALUES (NEW.isbn, NEW.aantal);
-		}
+	--Schrijver die nog niet in de tabel boek voorkomt.
+	IF(NOT(EXISTS(SELECT auteur FROM Boek WHERE auteur = NEW.auteur))) THEN
+		--Voeg nieuwe rij aan bestelling toe
+		INSERT INTO Bestelling (isbn, aantal) VALUES (NEW.isbn, NEW.aantal);
+	END IF;	
     END;
-$$ LANGUAGE plpgsql;
+$emp_stamp$ LANGUAGE plpgsql;
 
 
 CREATE TRIGGER addBooks AFTER INSERT OF isbn ON Boek

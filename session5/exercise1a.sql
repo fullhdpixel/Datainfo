@@ -12,7 +12,7 @@ CREATE TABLE Boek
 CREATE TABLE Exemplaar
 (
   isbn integer PRIMARY KEY NOT NULL,
-  volgnummer integer,
+  volgnummer integer PRIMARY KEY,
   gewicht double precision,
   kast text,
   CONSTRAINT exemplaar_isbn_fkey FOREIGN KEY (isbn)
