@@ -1,1 +1,3 @@
-READ COMMITTED of hoger
+READ COMMITTED
+
+--Thuis nog oefenen

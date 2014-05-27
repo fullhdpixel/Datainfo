@@ -1,3 +1,6 @@
+--Code Tested: Thijs Smudde
+--s1421689
+
 INSERT INTO Boek (isbn, titel, auteur) VALUES (1,'Titel not found','404');
 
 INSERT INTO Boek (isbn, titel, auteur) VALUES (1,'Harry Potter and the Deathly Hallows','J.K. Rowling');

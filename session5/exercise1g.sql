@@ -1,3 +1,6 @@
+--Code Tested: Thijs Smudde
+--s1421689
+
 CREATE TABLE Bestelling
 (
   isbn integer NOT NULL,
