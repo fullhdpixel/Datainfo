@@ -3,7 +3,11 @@
 
 --Schedule S is niet-serialiseerbaar:
 
-S = R2(x), W1(x), W2(x)
+--S = R2(x), W1(x), W2(x)
+
+read2(x): SELECT titel FROM Boek WHERE isbn = ' 0136067018';
+write1(x): UPDATE Boek SET titel = titel || ' deel 1' WHERE isbn = '0136067018';
+write2(x): UPDATE Boek SET titel = titel || ' deel 2' WHERE isbn = ' 0136067018';
 
 --W = Update.
 --R = Read.
