@@ -10,7 +10,7 @@ CREATE FUNCTION addbook() RETURNS boolean AS $$
 		--Schrijver die nog niet in de tabel boek voorkomt.
 		IF(NOT(EXISTS(SELECT auteur FROM Boek WHERE auteur = NEW.auteur))) {
 			--Voeg nieuwe rij aan bestelling toe
-			INSERT INTO Bestelling (isbn, aantal) VALUES (new.isbn, new.aantal);
+			INSERT INTO Bestelling (isbn, aantal) VALUES (NEW.isbn, NEW.aantal);
 		}
     END;
 $$ LANGUAGE plpgsql;
