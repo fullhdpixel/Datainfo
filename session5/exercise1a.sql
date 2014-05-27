@@ -8,7 +8,7 @@ CREATE TABLE Boek
 
 CREATE TABLE Exemplaar
 (
-  isbn integer NOT NULL,
+  isbn integer PRIMARY KEY NOT NULL,
   volgnummer integer,
   gewicht double precision,
   kast text,
